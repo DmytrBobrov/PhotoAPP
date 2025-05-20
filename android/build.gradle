@@ -1,18 +1,8 @@
-buildscript {
-    ext.kotlin_version = '1.7.10'
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
+defaultConfig {
+    applicationId "com.example.bf_flutter_project"
+    minSdk 21
+    targetSdk 33
+    versionCode 1
+    versionName "1.0"
+    multiDexEnabled true
 }
