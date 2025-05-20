@@ -1,8 +1,26 @@
-defaultConfig {
-    applicationId "com.example.bf_flutter_project"
-    minSdk 21
-    targetSdk 33
-    versionCode 1
-    versionName "1.0"
-    multiDexEnabled true
+android {
+    compileSdkVersion 33 // Або новіша версія
+    // ...
+    defaultConfig {
+        // ...
+        minSdkVersion 21 // Мінімальна версія SDK має бути 21 або вище
+        targetSdkVersion 33 // Має відповідати compileSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true // Важливо для великих додатків
+    }
+    // ...
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // ...
+    implementation platform('com.google.firebase:firebase-bom:32.7.0') // Або остання версія
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.android.support:multidex:2.0.1'
+    // Інші залежності
 }
